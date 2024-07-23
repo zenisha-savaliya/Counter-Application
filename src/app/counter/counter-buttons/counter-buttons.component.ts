@@ -6,22 +6,20 @@ import { counterState } from '../state/counter.state';
 @Component({
   selector: 'app-counter-buttons',
   templateUrl: './counter-buttons.component.html',
-  styleUrls: ['./counter-buttons.component.scss']
+  styleUrls: ['./counter-buttons.component.scss'],
 })
-export class CounterButtonsComponent implements OnInit{
+export class CounterButtonsComponent implements OnInit {
+  constructor(private store: Store<{ counter: counterState }>) {}
 
-  constructor(private store:Store<{counter:counterState}>){}
+  ngOnInit(): void {}
 
-  ngOnInit(): void {  
-  }
-  
-  public onIncrement():void{
+  public onIncrement(): void {
     this.store.dispatch(increment());
   }
-  public onDecrement():void{
+  public onDecrement(): void {
     this.store.dispatch(decrement());
   }
-  public onReset():void{
+  public onReset(): void {
     this.store.dispatch(reset());
   }
 }
