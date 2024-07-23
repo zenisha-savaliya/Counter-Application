@@ -1,3 +1,7 @@
-export const intialState = {
+export interface counterState{
+    counter:number
+}
+
+export const intialState:counterState = {
     counter:0
 }
