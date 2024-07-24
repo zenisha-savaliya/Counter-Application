@@ -1,2 +1,10 @@
+<div class="row">
+  <p>My name is {{ name }}</p>
+  <div class="col-md-6 my-2">
+    <button class="btn btn-primary btn-block" (click)="changeName()">
+      Change name
+    </button>
+  </div>
+</div>
 <input type="number" placeholder="Enter value" [(ngModel)]="value" />
 <button class="btn btn-primary" (click)="onAdd()">Add to counter</button>
