@@ -1,5 +1,5 @@
 <div class="row">
-  <p>My name is {{ name }}</p>
+  <p>My name is {{ name$ | async }}</p>
   <div class="col-md-6 my-2">
     <button class="btn btn-primary btn-block" (click)="changeName()">
       Change name
